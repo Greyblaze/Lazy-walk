@@ -1,0 +1,590 @@
+:root {
+  --first: #ffebcd;
+  --second: ;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  background-color: var(--first);
+  width: 100%;
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  background-color: var(--first);
+  width: 100%;
+  margin: 1rem;
+}
+
+.list {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+.list ul {
+  display: flex;
+  font-size: 0.85rem;
+  margin: auto;
+  justify-content: center;
+}
+
+.list li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+  color: rgb(100, 100, 100);
+}
+
+.list li b {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.section {
+  background-color: whitesmoke;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+.img-container {
+  background-color: blueviolet;
+  margin-right: 1rem;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  background-color: var(--first);
+}
+.about-text h4 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.about-text p {
+  margin: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.about-text button {
+  background-color: black;
+  border: solid 1px black;
+  border-radius: 0.25rem;
+  color: whitesmoke;
+  display: flex;
+  margin: auto;
+  font-size: 1rem;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 2.5rem 1.5rem 2.5rem;
+  font-size: 1rem;
+}
+
+.services img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.service-1 {
+  width: 100%;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.service-2 {
+  width: 100%;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.service-3 {
+  width: 100%;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.text h4 {
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.text p {
+  margin: 0.5rem;
+}
+.text b {
+  font-size: 0.5rem;
+}
+
+.work {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  background-color: steelblue;
+  background-image: url("images/background.jpg");
+  background-size: contain;
+}
+.work-text {
+  width: 40%;
+  background-color: whitesmoke;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+}
+.work-text h4 {
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+}
+.work-text button {
+  background-color: black;
+  color: whitesmoke;
+  font-size: 0.5rem;
+  display: flex;
+  border-radius: 0.25rem;
+}
+.work-text button a {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.work img {
+  background-color: whitesmoke;
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+}
+.review {
+  padding: 0;
+  position: relative;
+}
+
+.review .slide-container .slide {
+  height: 10rem;
+  display: flex;
+  margin: 1rem;
+}
+
+.review .slide-container .slide .content {
+  animation: slideContent 0.5s linear 1s backwards;
+  margin: 1rem;
+}
+
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}
+.review .slide-container .slide .content h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Montserrat";
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 0.5rem;
+  color: black;
+}
+
+.review .slide-container .slide .content p {
+  font-size: 0.85rem;
+  color: var(--black);
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.review .slide-container {
+  display: none;
+}
+
+.review .slide-container.active {
+  display: block;
+}
+
+.review #prev,
+.review #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 100;
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border: 0.2rem solid var(--black);
+  cursor: pointer;
+  text-align: center;
+}
+
+.review #prev:hover,
+.review #next:hover {
+  color: #fff;
+  background: var(--green);
+}
+
+.review #prev {
+  left: 3rem;
+}
+
+.review #next {
+  right: 3rem;
+}
+
+footer {
+  background-color: rgb(110, 223, 208);
+  width: 100%;
+  height: 5rem;
+}
+.follow {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75rem;
+  color: black;
+  font-weight: 550;
+}
+.img {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.img img {
+  width: 16%;
+  height: 4rem;
+}
+.footer-text {
+  display: flex;
+  justify-content: space-around;
+}
+.menu {
+  display: flex;
+  font-size: 0.7rem;
+}
+.copyright {
+  display: flex;
+  font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: rgb(100, 100, 100);
+  }
+
+  header {
+    background-color: var(--first);
+    width: 100%;
+    display: flex;
+  }
+
+  .nav {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: var(--first);
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .list {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .list ul {
+    display: flex;
+    font-size: 0.85rem;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .list li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    color: rgb(100, 100, 100);
+  }
+
+  .list li b {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+
+  .section {
+    background-color: whitesmoke;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+  }
+  .img-container {
+    background-color: blueviolet;
+    margin-right: 1rem;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-text {
+    background-color: var(--first);
+  }
+  .about-text h4 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-text p {
+    margin: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-text button {
+    background-color: black;
+    border: solid 1px black;
+    border-radius: 0.25rem;
+    color: whitesmoke;
+    display: flex;
+    margin: auto;
+    font-size: 0.6rem;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+
+  .services img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .service-1 {
+    width: 100%;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .service-2 {
+    width: 100%;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .service-3 {
+    width: 100%;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .text h4 {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+  .text p {
+    margin: 0.5rem;
+  }
+  .text b {
+    font-size: 0.5rem;
+  }
+
+  .work {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    background-color: steelblue;
+    background-image: url("images/background.jpg");
+    background-size: contain;
+  }
+  .work-text {
+    width: 40%;
+    background-color: whitesmoke;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+  }
+  .work-text h4 {
+    font-size: 0.75rem;
+    margin-bottom: 2px;
+  }
+  .work-text button {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 0.5rem;
+    display: flex;
+    border-radius: 0.25rem;
+  }
+  .work-text button a {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  .work img {
+    background-color: whitesmoke;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+  }
+  .review {
+    padding: 0;
+    position: relative;
+  }
+
+  .review .slide-container .slide {
+    height: 10rem;
+    display: flex;
+    margin: 1rem;
+  }
+
+  .review .slide-container .slide .content {
+    animation: slideContent 0.5s linear 1s backwards;
+    margin: 1rem;
+  }
+
+  @keyframes slideContent {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+    }
+  }
+  .review .slide-container .slide .content h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "Montserrat";
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 0.5rem;
+    color: black;
+  }
+
+  .review .slide-container .slide .content p {
+    font-size: 0.85rem;
+    color: var(--black);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .review .slide-container {
+    display: none;
+  }
+
+  .review .slide-container.active {
+    display: block;
+  }
+
+  .review #prev,
+  .review #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 100;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border: 0.2rem solid var(--black);
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .review #prev:hover,
+  .review #next:hover {
+    color: #fff;
+    background: var(--green);
+  }
+
+  .review #prev {
+    left: 3rem;
+  }
+
+  .review #next {
+    right: 3rem;
+  }
+
+  footer {
+    background-color: rgb(110, 223, 208);
+    width: 100%;
+    height: 5rem;
+  }
+  .follow {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.75rem;
+    color: black;
+    font-weight: 550;
+  }
+  .img {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .img img {
+    width: 16%;
+    height: 4rem;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.25rem;
+  }
+  .menu {
+    display: flex;
+    font-size: 0.7rem;
+  }
+  .copyright {
+    display: flex;
+    font-size: 0.7rem;
+  }
+}
